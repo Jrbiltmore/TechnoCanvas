@@ -1,3 +1,13 @@
+
+
+/*
+   TechnoCanvas - Cutting-edge Digital Art Creation Tool
+   Developed by Vespers Inc.
+   Copyright (c) 2022 Vespers Inc. All rights reserved.
+*/
+
+
+
 // Function for exporting assets to Unity project
 void exportToUnityProject(const std::string& projectName) {
     // Add your code here for exporting assets to a Unity project
