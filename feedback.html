@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Feedback</title>
+  <style>
+    .container {
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-group input[type="text"],
+    .form-group textarea {
+      width: 100%;
+      padding: 5px;
+      font-size: 16px;
+    }
+    .form-group textarea {
+      resize: vertical;
+    }
+    .form-group button {
+      padding: 8px 16px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>User Feedback</h2>
+    <form id="feedback-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Function to handle form submission
+    function submitForm(event) {
+      event.preventDefault(); // Prevent default form submission behavior
+
+      // Get form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Send the form data to the server (you can replace this with your own implementation)
+      // For example, you can use AJAX to send the data to a backend API
+      // Here, we'll just log the data to the console
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Message:', message);
+
+      // Reset the form
+      document.getElementById('feedback-form').reset();
+
+      // Show a confirmation message (you can replace this with your own implementation)
+      // For example, you can display a success message on the page or redirect to a thank you page
+      alert('Thank you for your feedback!');
+    }
+
+    // Attach the form submission event handler
+    const feedbackForm = document.getElementById('feedback-form');
+    feedbackForm.addEventListener('submit', submitForm);
+  </script>
+</body>
+</html>
